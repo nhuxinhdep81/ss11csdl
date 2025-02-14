@@ -37,8 +37,7 @@ having Total_Sales > 10;
 select * from View_Top_Selling_Tracks;
 
 -- 5
-create index idx_Track_Name 
-on Track (Name) using btree;
+create index idx_Track_Name on Track (Name) using btree;
 
 select * from Track
 where Name like '%Love%';
@@ -47,8 +46,7 @@ explain analyze select * from Track
 where Name like '%Love%';
 
 -- 6
-create index idx_Invoice_Total 
-on Invoice (Total);
+create index idx_Invoice_Total on Invoice (Total);
 
 select * from Invoice
 where Total between 20 and 100;
